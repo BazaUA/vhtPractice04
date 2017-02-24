@@ -15,10 +15,16 @@ scopes = {Constants.EMAIL_SCOPE },
 
 public class HelloWorldEndpoints {
 
+    @ApiMethod(name ="greetByStrong", path = "greetByStrong", httpMethod = HttpMethod.GET)
+    public HelloClass greetByStrong(@Named("name") String name, @Named("period") String period , @Named("strong") String strong){
+        return new HelloClass(name,period,strong);
+    }
+
     @ApiMethod(name ="greetByPeriod", path = "greetByPeriod", httpMethod = HttpMethod.GET)
     public HelloClass greetByPeriod(@Named("name") String name,    @Named("period") String period){
         return new HelloClass(name,period);
     }
+
 
 
     // Declare this method as a method available externally through Endpoints

@@ -13,7 +13,9 @@ public class HelloClass {
     public HelloClass (String name, String period) {
         this.message = "Good " +period+" "+ name + "!";
     }
-
+    public HelloClass (String name, String period,String strong) {
+        this.message = "Good " +period+" "+strong+" "+name+"!";
+    }
     public String getMessage() {
         return message;
     }
